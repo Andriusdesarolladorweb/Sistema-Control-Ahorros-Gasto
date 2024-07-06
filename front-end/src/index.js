@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Menu from "./Componte/Menu";
 import CrudEntradas from "./Componte/CrudEntradas";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Variable para controlar qué componente se debe renderizar
 let currentComponent = <CrudEntradas />;

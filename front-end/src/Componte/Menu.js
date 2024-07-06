@@ -13,10 +13,10 @@ export default function Menu({ changeComponent }) {
           </a>
 
           <div class="collapse navbar-collapse   " id="navbarNavDropdown">
-            <ul class="navbar-nav  ">
-              <li class="nav-item">
+            <ul class="navbar-nav   ">
+              <li class="nav-item ">
                 <a
-                  class="nav-link "
+                  class="nav-link  "
                   href="#"
                   onClick={() => changeComponent(<CrudEntradas />)}
                 >

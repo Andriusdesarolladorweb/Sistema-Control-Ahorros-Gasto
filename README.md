@@ -1,2 +1,0 @@
-# Proyecto
-Created with CodeSandbox
