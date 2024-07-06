@@ -1,0 +1,18 @@
+.navbar-brand {
+  margin-left: 5%;
+  font-size: 22px;
+}
+
+.navbar-nav {
+  margin: 5px;
+  margin-left: 10%;
+}
+.nav-link {
+  color: white;
+  margin-left: 18px;
+  font-size: 17px;
+}
+
+.nav-link:hover {
+  color: aqua;
+}
