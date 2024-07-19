@@ -6,53 +6,53 @@ import ReporteEntradas from "./ReportesEntradas";
 export default function Menu({ changeComponent }) {
   return (
     <div className="">
-      <nav class="navbar navbar-expand-lg bg-black  ">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white " href="#">
+      <nav className="navbar navbar-expand-lg bg-black  ">
+        <div className="container-fluid">
+          <a className="navbar-brand text-white " href="#">
             Control de ahorros
           </a>
 
-          <div class="collapse navbar-collapse   " id="navbarNavDropdown">
-            <ul class="navbar-nav   ">
-              <li class="nav-item ">
+          <div className="collapse navbar-collapse   " id="navbarNavDropdown">
+            <ul className="navbar-nav   ">
+              <li className="nav-item ">
                 <a
-                  class="nav-link  "
+                  className="nav-link  "
                   href="#"
                   onClick={() => changeComponent(<CrudEntradas />)}
                 >
                   Entradas
                 </a>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a
-                  class="nav-link "
+                  className="nav-link "
                   href="#"
                   onClick={() => changeComponent(<Gastos />)}
                 >
                   Gastos
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#">
+              <li className="nav-item">
+                <a className="nav-link " href="#">
                   Ahorros
                 </a>
               </li>
 
-              <li class="nav-item ">
-                <a class="nav-link  " href="#">
+              <li className="nav-item ">
+                <a className="nav-link  " href="#">
                   Tajertas de credito
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link  " href="#">
+              <li className="nav-item">
+                <a className="nav-link  " href="#">
                   Pagos de deudas
                 </a>
               </li>
 
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -61,10 +61,10 @@ export default function Menu({ changeComponent }) {
                   Todos los reportes
                 </a>
 
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
                     <a
-                      class="dropdown-item"
+                      className="dropdown-item"
                       href="#"
                       onClick={() => changeComponent(<ReporteEntradas />)}
                     >
@@ -72,12 +72,12 @@ export default function Menu({ changeComponent }) {
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Reportes de Gatos
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Reportes de Ahorros
                     </a>
                   </li>
