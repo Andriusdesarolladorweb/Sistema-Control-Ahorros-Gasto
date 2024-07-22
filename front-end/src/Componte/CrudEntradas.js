@@ -4,106 +4,19 @@ import imgEditar from "../img/Editar.png";
 import imgEliminar from "../img/borrar.png";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import ReporteEntradas from "./ReportesEntradas";
+
 
 // Esta es la function principar del componte
 export default function CrudEntradas() {
-  //Array para mostrar datos en la tabla
-  const mostrarDatos = [
-    { id: 1, monto: 15000, fecha: "2024-06-14", concepto: "Pago Quincena" },
-    { id: 2, monto: 15000, fecha: "2024-06-14", concepto: "Pago Quincena" },
-    { id: 3, monto: 15000, fecha: "2024-06-14", concepto: "Pago Quincena" },
-    { id: 4, monto: 15000, fecha: "2024-06-14", concepto: "Pago Quincena" },
-    { id: 5, monto: 15000, fecha: "2024-06-14", concepto: "Pago Quincena" },
-  ];
-
-  // Cargar datos desde localStorage o usar datos predeterminados
-  const [data, setData] = useState(() => {
-    const storedData = localStorage.getItem("entradas");
-    return storedData ? JSON.parse(storedData) : mostrarDatos;
-  });
-  const [monto, setMonto] = useState("");
-  const [fecha, setFecha] = useState("");
-  const [concepto, setConcepto] = useState("");
-  const [editId, setEditId] = useState(null);
-
-  // Guardar datos en localStorage cuando 'data' cambia
-  useEffect(() => {
-    localStorage.setItem("entradas", JSON.stringify(data));
-  }, [data]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "Monto") {
-      setMonto(value);
-    } else if (name === "Fecha") {
-      setFecha(value);
-    } else if (name === "Concepto") {
-      setConcepto(value);
-    }
-  };
-
-  // Insertar registro
-  const handleInsertClick = () => {
-    if (!monto || !fecha || !concepto) {
-      toast.error("Por favor, complete todos los campos");
-      return;
-    }
-
-    if (!editId) {
-      const newId = data.length ? Math.max(...data.map((d) => d.id)) + 1 : 1;
-      const nuevaEntrada = { id: newId, monto, fecha, concepto };
-      setData([...data, nuevaEntrada]);
-      setMonto("");
-      setFecha("");
-      setConcepto("");
-    }
-
-    //Alerta de que se registro correctamente
-    toast.success("¡Se ha registrado correctamente!");
-  };
-
-  // Editar registros
-  const handleEditClick = (id) => {
-    const entryToEdit = data.find((entry) => entry.id === id);
-    if (entryToEdit) {
-      setMonto(entryToEdit.monto);
-      setFecha(entryToEdit.fecha);
-      setConcepto(entryToEdit.concepto);
-      setEditId(id);
-    }
-  };
-
-  const handleSaveClick = () => {
-    const newData = data.map((entry) => {
-      if (entry.id === editId) {
-        return {
-          ...entry,
-          monto: monto,
-          fecha: fecha,
-          concepto: concepto,
-        };
-      }
-      return entry;
-    });
-    setData(newData);
-    setMonto("");
-    setFecha("");
-    setConcepto("");
-    setEditId();
-
-    //Alerta de que se edito correctamente
-    toast.success("¡Se ha editado correctamente!");
-  };
-
-  const handleDeleteClick = (id) => {
-    const newData = data.filter((entry) => entry.id !== id);
-    setData(newData);
-
-    //Alerta de que se elimino correctamente
-    toast.success("¡Se ha eliminado correctamente!");
-  };
-
+  
+   const [monto, setMonto] = useState(0);
+   const [fecha, setFecha] = useState(""); 
+   const [Concepto, setConcepto] = useState(""); 
+ 
+   const mostrarDatos = () =>{
+    alert(monto)
+   }
+  
   return (
     <div>
       <ToastContainer />
@@ -123,8 +36,11 @@ export default function CrudEntradas() {
                   className="form-control"
                   id="Monto"
                   name="Monto"
-                  value={monto}
-                  onChange={handleChange}
+                  onChange={(event) =>{
+                    setMonto(event.target.value);
+                  }}
+                  
+                  
                 />
               </div>
               <div className="mb-3 mt-3">
@@ -136,8 +52,10 @@ export default function CrudEntradas() {
                   className="form-control"
                   id="Fecha"
                   name="Fecha"
-                  value={fecha}
-                  onChange={handleChange}
+                  onChange={(event) =>{
+                    setFecha(event.target.value);
+                  }}
+                   
                 />
               </div>
               <div className="mb-3">
@@ -149,16 +67,18 @@ export default function CrudEntradas() {
                   className="form-control"
                   id="Concepto"
                   name="Concepto"
-                  value={concepto}
-                  onChange={handleChange}
+                  onChange={(event) =>{
+                  setConcepto(event.target.value);
+                  }}
+                  
                 />
               </div>
               <button
                 type="button"
-                className="btn btn-primary submit-btn text-center d-flex m-auto"
-                onClick={editId ? handleSaveClick : handleInsertClick}
+                className="btn btn-primary submit-btn text-center d-flex m-auto"  
+               onClick={mostrarDatos}
               >
-                {editId ? "Actualizar" : "Agregar"}
+                Registar
               </button>
               <br />
             </div>
@@ -177,16 +97,16 @@ export default function CrudEntradas() {
               </tr>
             </thead>
             <tbody>
-              {data.map((elemento) => (
-                <tr key={elemento.id}>
-                  <td>{elemento.id}</td>
-                  <td>{elemento.monto}</td>
-                  <td>{elemento.fecha}</td>
-                  <td>{elemento.concepto}</td>
+              
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td className="d-flex">
                     <button
                       className="btn d-flex m-auto "
-                      onClick={() => handleEditClick(elemento.id)}
+                     
                     >
                       <img src={imgEditar} alt="" className="imgEditar" />
                     </button>
@@ -194,19 +114,19 @@ export default function CrudEntradas() {
                   <td>
                     <button
                       className="btn d-flex m-auto"
-                      onClick={() => handleDeleteClick(elemento.id)}
+                    
                     >
                       <img src={imgEliminar} alt="" className="imgEditar" />
                     </button>
                   </td>
                 </tr>
-              ))}
+             
             </tbody>
           </table>
         </div>
       </div>
 
-      <ReporteEntradas data={data} />
+    
     </div>
   );
 }
