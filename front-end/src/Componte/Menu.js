@@ -16,8 +16,7 @@ export default function Menu({ changeComponent }) {
             <ul className="navbar-nav   ">
               <li className="nav-item ">
                 <a
-                  className="nav-link text-
-                  white  "
+                  className="nav-link text-white  "
                   href="#"
                   onClick={() => changeComponent(<CrudEntradas />)}
                 >
@@ -26,8 +25,7 @@ export default function Menu({ changeComponent }) {
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link text-
-                  white "
+                  className="nav-link text-white "
                   href="#"
                   onClick={() => changeComponent(<Gastos />)}
                 >
@@ -35,22 +33,19 @@ export default function Menu({ changeComponent }) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-
-                white " href="#">
+                <a className="nav-link text-white " href="#">
                   Ahorros
                 </a>
               </li>
 
               <li className="nav-item ">
-                <a className="nav-link text-
-                white  " href="#">
+                <a className="nav-link text-white  " href="#">
                   Tajertas de credito
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link text-
-                white  " href="#">
+                <a className="nav-link text-white  " href="#">
                   Pagos de deudas
                 </a>
               </li>
