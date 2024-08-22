@@ -1,4 +1,4 @@
-import ModelsEntrada from '../models/ModelsEntrada';
+import ModelsEntrada from '../models/ModelsEntrada.js';
 
 // mostrar los registro 
 
