@@ -8,6 +8,7 @@ const app = express();
 const port = 3006;
 
 
-app.listen(port, () =>{
+app.listen(3006, () =>{
   console.log("corriendo bien");
 })
+
