@@ -1,7 +1,15 @@
-import mysql from 'mysql2';
+
+import {Sequelize} from 'sequelize';
+
+const db = new Sequelize('sistema_control_ahorros_gasto', 'root', '', {
+  host:'localhost', 
+  dialect:'mysql' }  );
+
+  export default db;
+
 
 // Cree la conexión a la base de datos
-async function createConnection() {
+/*async function createConnection() {
 const connection = mysql.createConnection({
   host: 'localhost', 
   user: 'root', 
@@ -23,3 +31,4 @@ connection.end();
 }
 
 export default createConnection();
+*/
