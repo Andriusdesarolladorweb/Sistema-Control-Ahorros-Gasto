@@ -55,7 +55,7 @@ export const updatedEntrada = async (req, res) => {
 
  export const deleteEntrada = async (req, res) => {
    try {
-     await ModelsEntrada.delete(req.body, {
+     await ModelsEntrada.destroy( {
       where: { id: req.params.id }
      });
  
