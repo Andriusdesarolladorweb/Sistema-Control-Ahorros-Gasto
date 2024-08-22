@@ -13,4 +13,5 @@ const MostarEntrada = db.define('entradas', {
   
 });
 
+
 export default MostarEntrada;
