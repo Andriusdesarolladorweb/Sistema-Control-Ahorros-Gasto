@@ -1,7 +1,7 @@
 
-import "../css/menu.css";
+import "./css/menu.css";
 import Gastos from "./crud_gastos/Gastos.js";
-import CrudEntradas from "./crud_entradas/CrudEntradas.js";
+import Entradas from "./crud_entradas/MostrarEntradas.js";
 import ReporteEntradas from "./repostes/ReportesEntradas.js";
 
 export default function Menu({ changeComponent }) {
@@ -19,7 +19,7 @@ export default function Menu({ changeComponent }) {
                 <a
                   className="nav-link text-white  "
                   href="#"
-                  onClick={() => changeComponent(<CrudEntradas />)}
+                  onClick={() => changeComponent(<Entradas />)}
                 >
                   Entradas
                 </a>
