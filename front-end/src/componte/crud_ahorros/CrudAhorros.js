@@ -4,6 +4,7 @@ import imgEditar from "../img/Editar.png";
 import imgEliminar from "../img/borrar.png";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+
 export default function CrudAhorros() {
   const MostrarDatos = [];
   // Cargar datos desde localStorage o usar datos predeterminados

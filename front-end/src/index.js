@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Menu from "./Componte/Menu";
-import CrudEntradas from "./Componte/CrudEntradas";
+import Menu from "./componte/Menu.js"
+import CrudEntradas from "./componte/crud_entradas/CrudEntradas.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

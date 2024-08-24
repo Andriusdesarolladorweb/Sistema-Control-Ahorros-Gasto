@@ -1,7 +1,8 @@
+
 import "../css/menu.css";
-import Gastos from "./Gastos";
-import CrudEntradas from "./CrudEntradas";
-import ReporteEntradas from "./ReportesEntradas";
+import Gastos from "./crud_gastos/Gastos.js";
+import CrudEntradas from "./crud_entradas/CrudEntradas.js";
+import ReporteEntradas from "./repostes/ReportesEntradas.js";
 
 export default function Menu({ changeComponent }) {
   return (
