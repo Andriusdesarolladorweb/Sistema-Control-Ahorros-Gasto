@@ -7,7 +7,7 @@
   width: 350px;
 }
 .Container-titulo {
-  width: 298.5px;
+  width: 300px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -20,13 +20,22 @@
   border-radius: 15px;
   border: 1px solid;
   border-color: rgb(192, 192, 192);
+  margin-right: 15px;
   width: 300px;
 }
-.btnRegistro {
+.btn {
   text-align: center;
-  margin-right: 5px;
+
 }
 
-.imgEditar {
-  width: 25px;
+.imgEditar{
+width: 12%;
+}
+
+.btn-editar{
+width: 15%;
+}
+
+.btn-eliminar{
+  width: 15%;
 }
