@@ -31,7 +31,7 @@ export default function Menu({ changeComponent }) {
                   href="#"
                   onClick={() => changeComponent(<Doctores />)}
                 >
-                 Resgistro de doctores
+                 Resgistro de Medicos
                 </a>
               </li>
             </ul>

@@ -106,7 +106,7 @@ export default function Doctores() {
         <div className="Container-formulario">
           <form className="Formulario bg-white text-black">
             <div className="Container-titulo bg-primary">
-              <h4 className="text-center text-white">Registro de Doctores</h4>
+              <h4 className="text-center text-white">Registro de Medicos</h4>
             </div>
             <div className="container">
               <div className="mb-3">
